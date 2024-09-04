@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Company Registration Form</title>
+		<link rel="stylesheet" href="styles.css" />
+	</head>
+	<body>
+		<header>
+			<h1>COMPANY REGISTRATION USER-FORM</h1>
+		</header>
+		<main>
+			<section>
+				<form
+					id="registrationForm"
+					action="https://script.google.com/macros/s/AKfycbzXC2NtE7848HqNHmopor5ofdkBA0uwymc51MTGQGKNmhNR723Vwt-HgdQ61i_NU8U/exec"
+					method="POST"
+				>
+					<!-- Company Details -->
+					<fieldset>
+						<legend>Company Details</legend>
+
+						<!-- Company Name Section -->
+						<label for="companyName">Company Name:</label>
+						<input type="text" id="companyName" name="companyName" required />
+						<small>Enter the proposed name of the company.</small>
+
+						<!-- Alternative Names Section -->
+						<div id="alternativeNamesContainer">
+							<label for="alternativeName1">Alternative Names:</label>
+							<div class="alternative-name">
+								<input
+									type="text"
+									id="alternativeName1"
+									name="alternativeNames[0]"
+									placeholder="Alternative Name 1"
+								/>
+								<button type="button" class="removeAlternativeName">
+									Remove
+								</button>
+							</div>
+							<!-- Button to add more alternative names -->
+							<button type="button" id="addAlternativeName">
+								Add <span>Another</span> Alternative Name
+							</button>
+						</div>
+
+						<!-- Company Type Section -->
+						<label for="companyType">Company Type:</label>
+						<select id="companyType" name="companyType" required>
+							<option value="">Select</option>
+							<option value="private">Private Company</option>
+							<option value="public">Public Company</option>
+							<option value="nonProfit">Non-Profit Company</option>
+						</select>
+
+						<!-- Business Activity Section -->
+						<label for="businessActivity">Business Activity:</label>
+						<textarea
+							id="businessActivity"
+							name="businessActivity"
+							rows="4"
+							required
+						></textarea>
+						<small>
+							Provide a brief description of the business activities or
+							objectives.
+						</small>
+
+						<!-- Company Registration Address Section -->
+						<label for="registrationAddress"
+							>Company Registration Address:</label
+						>
+
+						<input
+							type="text"
+							id="regStreetAddress"
+							name="registrationAddress[street]"
+							placeholder="Street Address"
+							required
+						/>
+
+						<input
+							type="text"
+							id="regCity"
+							name="registrationAddress[city]"
+							placeholder="City"
+							required
+						/>
+
+						<input
+							type="text"
+							id="regProvince"
+							name="registrationAddress[province]"
+							placeholder="Province"
+							required
+						/>
+
+						<input
+							type="text"
+							id="regPostalCode"
+							name="registrationAddress[postalCode]"
+							placeholder="Postal Code"
+							required
+						/>
+
+						<!-- Postal Address Section -->
+						<label for="postalAddress">Postal Address:</label>
+
+						<input
+							type="text"
+							id="postalStreetAddress"
+							name="postalAddress[street]"
+							placeholder="Street Address"
+						/>
+
+						<input
+							type="text"
+							id="postalCity"
+							name="postalAddress[city]"
+							placeholder="City"
+						/>
+
+						<input
+							type="text"
+							id="postalProvince"
+							name="postalAddress[province]"
+							placeholder="Province"
+						/>
+
+						<input
+							type="text"
+							id="postalPostalCode"
+							name="postalAddress[postalCode]"
+							placeholder="Postal Code"
+						/>
+					</fieldset>
+
+					<!-- Director Details -->
+					<fieldset>
+						<legend>Director Details</legend>
+						<div id="directorsContainer">
+							<div class="director">
+								<h3>Director 1</h3>
+
+								<label for="directorName1">Full Name:</label>
+								<input
+									type="text"
+									id="directorName1"
+									name="directors[0][name]"
+									required
+								/>
+								<small>Enter the full legal name of the director.</small>
+
+								<label for="directorDob1">Date of Birth:</label>
+								<input
+									type="date"
+									id="directorDob1"
+									name="directors[0][dob]"
+									required
+								/>
+
+								<label for="directorNationality1">Nationality:</label>
+								<input
+									type="text"
+									id="directorNationality1"
+									name="directors[0][nationality]"
+									required
+								/>
+
+								<label for="directorIdNumber1">Identification Number:</label>
+								<input
+									type="text"
+									id="directorIdNumber1"
+									name="directors[0][idNumber]"
+									required
+								/>
+
+								<!-- Residential Address (Broken down) -->
+								<label for="directorStreetAddress1">Street Address:</label>
+								<input
+									type="text"
+									id="directorStreetAddress1"
+									name="directors[0][address][street]"
+									required
+								/>
+
+								<label for="directorCity1">City:</label>
+								<input
+									type="text"
+									id="directorCity1"
+									name="directors[0][address][city]"
+									required
+								/>
+
+								<label for="directorProvince1">Province:</label>
+								<input
+									type="text"
+									id="directorProvince1"
+									name="directors[0][address][province]"
+									required
+								/>
+
+								<label for="directorPostalCode1">Postal Code:</label>
+								<input
+									type="text"
+									id="directorPostalCode1"
+									name="directors[0][address][postalCode]"
+									required
+								/>
+
+								<label for="directorEmail1">Email Address:</label>
+								<input
+									type="email"
+									id="directorEmail1"
+									name="directors[0][email]"
+									required
+								/>
+
+								<label for="directorPhone1">Phone Number:</label>
+								<input
+									type="tel"
+									id="directorPhone1"
+									name="directors[0][phone]"
+									required
+								/>
+
+								<button type="button" class="removeDirector">
+									Remove Director
+								</button>
+							</div>
+
+							<button type="button" id="addDirector">
+								Add <span>Another</span> Director
+							</button>
+						</div>
+					</fieldset>
+
+					<!-- Shareholder Details -->
+					<fieldset>
+						<legend>Shareholder Details</legend>
+						<div id="shareholdersContainer">
+							<div class="shareholder">
+								<h3>Shareholder 1</h3>
+
+								<label for="shareholderName1">Full Name:</label>
+								<input
+									type="text"
+									id="shareholderName1"
+									name="shareholders[0][name]"
+									required
+								/>
+								<small>Enter the full legal name of the shareholder.</small>
+
+								<label for="shareholderDob1">Date of Birth:</label>
+								<input
+									type="date"
+									id="shareholderDob1"
+									name="shareholders[0][dob]"
+									required
+								/>
+
+								<label for="shareholderNationality1">Nationality:</label>
+								<input
+									type="text"
+									id="shareholderNationality1"
+									name="shareholders[0][nationality]"
+									required
+								/>
+
+								<label for="shareholderIdNumber1">Identification Number:</label>
+								<input
+									type="text"
+									id="shareholderIdNumber1"
+									name="shareholders[0][idNumber]"
+									required
+								/>
+
+								<!-- Residential Address (Broken down) -->
+								<label for="shareholderStreetAddress1">Street Address:</label>
+								<input
+									type="text"
+									id="shareholderStreetAddress1"
+									name="shareholders[0][address][street]"
+									required
+								/>
+
+								<label for="shareholderCity1">City:</label>
+								<input
+									type="text"
+									id="shareholderCity1"
+									name="shareholders[0][address][city]"
+									required
+								/>
+
+								<label for="shareholderProvince1">Province:</label>
+								<input
+									type="text"
+									id="shareholderProvince1"
+									name="shareholders[0][address][province]"
+									required
+								/>
+
+								<label for="shareholderPostalCode1">Postal Code:</label>
+								<input
+									type="text"
+									id="shareholderPostalCode1"
+									name="shareholders[0][address][postalCode]"
+									required
+								/>
+
+								<label for="shareholderEmail1">Email Address:</label>
+								<input
+									type="email"
+									id="shareholderEmail1"
+									name="shareholders[0][email]"
+									required
+								/>
+
+								<label for="shareholderPhone1">Phone Number:</label>
+								<input
+									type="tel"
+									id="shareholderPhone1"
+									name="shareholders[0][phone]"
+									required
+								/>
+
+								<label for="numberOfShares1">Number of Shares:</label>
+								<input
+									type="number"
+									id="numberOfShares1"
+									name="shareholders[0][shares]"
+									required
+								/>
+
+								<button type="button" class="removeShareholder">
+									Remove Shareholder
+								</button>
+							</div>
+
+							<button type="button" id="addShareholder">
+								Add <span>Another</span> Shareholder
+							</button>
+						</div>
+					</fieldset>
+
+					<!-- Company Secretary Details -->
+					<fieldset>
+						<legend>Company Secretary Details</legend>
+
+						<!-- Full Name -->
+						<label for="secretaryName">Full Name:</label>
+						<input
+							type="text"
+							id="secretaryName"
+							name="secretaryName"
+							required
+						/>
+						<small>Enter the full legal name of the company secretary.</small>
+
+						<!-- Date of Birth -->
+						<label for="secretaryDob">Date of Birth:</label>
+						<input type="date" id="secretaryDob" name="secretaryDob" required />
+
+						<!-- Nationality -->
+						<label for="secretaryNationality">Nationality:</label>
+						<input
+							type="text"
+							id="secretaryNationality"
+							name="secretaryNationality"
+							required
+						/>
+
+						<!-- Identification Number -->
+						<label for="secretaryIdNumber">Identification Number:</label>
+						<input
+							type="text"
+							id="secretaryIdNumber"
+							name="secretaryIdNumber"
+							required
+						/>
+
+						<!-- Residential Address (Updated) -->
+						<label for="secretaryStreetAddress">Street Address:</label>
+						<input
+							type="text"
+							id="secretaryStreetAddress"
+							name="secretaryAddress[street]"
+							required
+						/>
+
+						<label for="secretaryCity">City:</label>
+						<input
+							type="text"
+							id="secretaryCity"
+							name="secretaryAddress[city]"
+							required
+						/>
+
+						<label for="secretaryProvince">Province:</label>
+						<input
+							type="text"
+							id="secretaryProvince"
+							name="secretaryAddress[province]"
+							required
+						/>
+
+						<label for="secretaryPostalCode">Postal Code:</label>
+						<input
+							type="text"
+							id="secretaryPostalCode"
+							name="secretaryAddress[postalCode]"
+							required
+						/>
+
+						<!-- Email Address -->
+						<label for="secretaryEmail">Email Address:</label>
+						<input
+							type="email"
+							id="secretaryEmail"
+							name="secretaryEmail"
+							required
+						/>
+
+						<!-- Phone Number -->
+						<label for="secretaryPhone">Phone Number:</label>
+						<input
+							type="tel"
+							id="secretaryPhone"
+							name="secretaryPhone"
+							required
+						/>
+					</fieldset>
+
+					<!-- Company Banking Details -->
+					<fieldset>
+						<legend>Banking Details</legend>
+
+						<label for="bankName">Bank Name:</label>
+						<select id="bankName" name="bankName" required>
+							<option value="" disabled selected>Select your bank</option>
+							<option value="ABSA">ABSA</option>
+							<option value="FNB">FNB (First National Bank)</option>
+							<option value="Nedbank">Nedbank</option>
+							<option value="StandardBank">Standard Bank</option>
+							<option value="Capitec">Capitec</option>
+							<option value="Investec">Investec</option>
+							<option value="HSBC">HSBC</option>
+							<!-- Add more banks as needed -->
+						</select>
+						<small>Select the bank where your business account is held.</small>
+
+						<label for="accountNumber">Account Number:</label>
+						<input
+							type="text"
+							id="accountNumber"
+							name="accountNumber"
+							pattern="\d{6,}"
+							required
+						/>
+						<small
+							>Enter the bank account number. Ensure it is accurate and free
+							from spaces or dashes.</small
+						>
+
+						<label for="accountType">Account Type:</label>
+						<select id="accountType" name="accountType" required>
+							<option value="" disabled selected>Select account type</option>
+							<option value="Current">Current</option>
+							<option value="Savings">Savings</option>
+							<option value="Business">Business</option>
+							<option value="Cheque">Cheque</option>
+							<!-- Add more account types if necessary -->
+						</select>
+						<small>Select the type of bank account.</small>
+
+						<label for="branchCode">Branch Code:</label>
+						<input
+							type="text"
+							id="branchCode"
+							name="branchCode"
+							pattern="\d{6}"
+							required
+						/>
+						<small
+							>Enter the branch code where your account is held. This is a
+							6-digit number.</small
+						>
+
+						<label for="accountHolderName">Account Holder Name:</label>
+						<input
+							type="text"
+							id="accountHolderName"
+							name="accountHolderName"
+							required
+						/>
+						<small
+							>Enter the name of the account holder. This should match the name
+							registered with the bank.</small
+						>
+
+						<!-- Account Holder Address Section -->
+						<label for="accountHolderAddress">Account Holder Address:</label>
+
+						<input
+							type="text"
+							id="accountHolderStreetAddress"
+							name="accountHolderAddress[street]"
+							placeholder="Street Address"
+							required
+						/>
+
+						<input
+							type="text"
+							id="accountHolderCity"
+							name="accountHolderAddress[city]"
+							placeholder="City"
+							required
+						/>
+
+						<input
+							type="text"
+							id="accountHolderProvince"
+							name="accountHolderAddress[province]"
+							placeholder="Province"
+							required
+						/>
+
+						<input
+							type="text"
+							id="accountHolderPostalCode"
+							name="accountHolderAddress[postalCode]"
+							placeholder="Postal Code"
+							required
+						/>
+
+						<label for="swiftCode">SWIFT/BIC Code:</label>
+						<input type="text" id="swiftCode" name="swiftCode" />
+						<small
+							>Enter the SWIFT or BIC code of your bank. This is optional but
+							helpful for international transactions.</small
+						>
+					</fieldset>
+
+					<!-- Additional Information -->
+					<fieldset>
+						<legend>Additional Information</legend>
+
+						<label for="registrationType">Company Registration Type:</label>
+						<select id="registrationType" name="registrationType" required>
+							<option value="">Select</option>
+							<option value="new">New Registration</option>
+							<option value="re-register">Re-registration</option>
+						</select>
+
+						<label for="specialRequests">Special Requests:</label>
+						<textarea
+							id="specialRequests"
+							name="specialRequests"
+							rows="4"
+						></textarea>
+					</fieldset>
+
+					<button type="submit">Submit</button>
+				</form>
+			</section>
+		</main>
+		<script src="script.js"></script>
+	</body>
+</html>
