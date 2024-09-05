@@ -21,12 +21,10 @@
 					<fieldset>
 						<legend>Company Details</legend>
 
-						<!-- Company Name Section -->
 						<label for="companyName">Company Name:</label>
 						<input type="text" id="companyName" name="companyName" required />
 						<small>Enter the proposed name of the company.</small>
 
-						<!-- Alternative Names Section -->
 						<div id="alternativeNamesContainer">
 							<label for="alternativeName1">Alternative Names:</label>
 							<div class="alternative-name">
@@ -40,13 +38,11 @@
 									Remove
 								</button>
 							</div>
-							<!-- Button to add more alternative names -->
 							<button type="button" id="addAlternativeName">
 								Add <span>Another</span> Alternative Name
 							</button>
 						</div>
 
-						<!-- Company Type Section -->
 						<label for="companyType">Company Type:</label>
 						<select id="companyType" name="companyType" required>
 							<option value="">Select</option>
@@ -55,7 +51,6 @@
 							<option value="nonProfit">Non-Profit Company</option>
 						</select>
 
-						<!-- Business Activity Section -->
 						<label for="businessActivity">Business Activity:</label>
 						<textarea
 							id="businessActivity"
@@ -63,16 +58,14 @@
 							rows="4"
 							required
 						></textarea>
-						<small>
-							Provide a brief description of the business activities or
-							objectives.
-						</small>
+						<small
+							>Provide a brief description of the business activities or
+							objectives.</small
+						>
 
-						<!-- Company Registration Address Section -->
 						<label for="registrationAddress"
 							>Company Registration Address:</label
 						>
-
 						<input
 							type="text"
 							id="regStreetAddress"
@@ -80,7 +73,6 @@
 							placeholder="Street Address"
 							required
 						/>
-
 						<input
 							type="text"
 							id="regCity"
@@ -88,7 +80,6 @@
 							placeholder="City"
 							required
 						/>
-
 						<input
 							type="text"
 							id="regProvince"
@@ -96,7 +87,6 @@
 							placeholder="Province"
 							required
 						/>
-
 						<input
 							type="text"
 							id="regPostalCode"
@@ -105,30 +95,25 @@
 							required
 						/>
 
-						<!-- Postal Address Section -->
 						<label for="postalAddress">Postal Address:</label>
-
 						<input
 							type="text"
 							id="postalStreetAddress"
 							name="postalAddress[street]"
 							placeholder="Street Address"
 						/>
-
 						<input
 							type="text"
 							id="postalCity"
 							name="postalAddress[city]"
 							placeholder="City"
 						/>
-
 						<input
 							type="text"
 							id="postalProvince"
 							name="postalAddress[province]"
 							placeholder="Province"
 						/>
-
 						<input
 							type="text"
 							id="postalPostalCode"
@@ -349,7 +334,6 @@
 					<fieldset>
 						<legend>Company Secretary Details</legend>
 
-						<!-- Full Name -->
 						<label for="secretaryName">Full Name:</label>
 						<input
 							type="text"
@@ -359,11 +343,9 @@
 						/>
 						<small>Enter the full legal name of the company secretary.</small>
 
-						<!-- Date of Birth -->
 						<label for="secretaryDob">Date of Birth:</label>
 						<input type="date" id="secretaryDob" name="secretaryDob" required />
 
-						<!-- Nationality -->
 						<label for="secretaryNationality">Nationality:</label>
 						<input
 							type="text"
@@ -372,7 +354,6 @@
 							required
 						/>
 
-						<!-- Identification Number -->
 						<label for="secretaryIdNumber">Identification Number:</label>
 						<input
 							type="text"
@@ -381,7 +362,6 @@
 							required
 						/>
 
-						<!-- Residential Address (Updated) -->
 						<label for="secretaryStreetAddress">Street Address:</label>
 						<input
 							type="text"
@@ -414,7 +394,6 @@
 							required
 						/>
 
-						<!-- Email Address -->
 						<label for="secretaryEmail">Email Address:</label>
 						<input
 							type="email"
@@ -423,7 +402,6 @@
 							required
 						/>
 
-						<!-- Phone Number -->
 						<label for="secretaryPhone">Phone Number:</label>
 						<input
 							type="tel"
@@ -442,12 +420,6 @@
 							<option value="" disabled selected>Select your bank</option>
 							<option value="ABSA">ABSA</option>
 							<option value="FNB">FNB (First National Bank)</option>
-							<option value="Nedbank">Nedbank</option>
-							<option value="StandardBank">Standard Bank</option>
-							<option value="Capitec">Capitec</option>
-							<option value="Investec">Investec</option>
-							<option value="HSBC">HSBC</option>
-							<!-- Add more banks as needed -->
 						</select>
 						<small>Select the bank where your business account is held.</small>
 
@@ -469,9 +441,6 @@
 							<option value="" disabled selected>Select account type</option>
 							<option value="Current">Current</option>
 							<option value="Savings">Savings</option>
-							<option value="Business">Business</option>
-							<option value="Cheque">Cheque</option>
-							<!-- Add more account types if necessary -->
 						</select>
 						<small>Select the type of bank account.</small>
 
@@ -500,9 +469,7 @@
 							registered with the bank.</small
 						>
 
-						<!-- Account Holder Address Section -->
 						<label for="accountHolderAddress">Account Holder Address:</label>
-
 						<input
 							type="text"
 							id="accountHolderStreetAddress"
@@ -510,7 +477,6 @@
 							placeholder="Street Address"
 							required
 						/>
-
 						<input
 							type="text"
 							id="accountHolderCity"
@@ -518,7 +484,6 @@
 							placeholder="City"
 							required
 						/>
-
 						<input
 							type="text"
 							id="accountHolderProvince"
@@ -526,7 +491,6 @@
 							placeholder="Province"
 							required
 						/>
-
 						<input
 							type="text"
 							id="accountHolderPostalCode"
